@@ -1,0 +1,76 @@
+DEEPLOG
+imsi_catch
+300 epochs
+3 layers
+128 hidden size
+10 window size
+
+imsi_catch
+model_path: model/Adam_batch_size=2048_epoch=300.pt
+Number of sessions(lte_normal): 14
+Number of sessions(lte_abnormal): 13
+elapsed_time: 0.087s
+false positive (FP): 9, false negative (FN): 0, Precision: 59.091%, Recall: 100.000%, F1-measure: 74.286%
+Finished Predicting
+
+attach_reject
+model_path: model/Adam_batch_size=2048_epoch=300.pt
+Number of sessions(lte_normal): 14
+Number of sessions(lte_abnormal): 8
+elapsed_time: 0.056s
+false positive (FP): 9, false negative (FN): 0, Precision: 47.059%, Recall: 100.000%, F1-measure: 64.000%
+Finished Predicting
+
+total
+model_path: model/Adam_batch_size=2048_epoch=300.pt
+Number of sessions(lte_normal): 14
+Number of sessions(lte_abnormal): 22
+elapsed_time: 0.109s
+false positive (FP): 12, false negative (FN): 1, Precision: 63.636%, Recall: 95.455%, F1-measure: 76.364%
+Finished Predicting
+
+
+TRANSFORMER
+window_size = 10 #args.window_size
+batch = 512 #args.batch_size
+epochs = 40
+use_cuda = True
+num_layers = 2
+num_heads = 2
+dropout = 0.2
+imsi_catch
+INFO:root:Testing Normal Time: 0m 0s
+INFO:root:False positive (FP): 7
+INFO:root:True negative (TN): 7
+INFO:root:Testing Abnormal Time: 0m 0s
+INFO:root:True positive (TP): 13
+INFO:root:False negative (FN): 0
+INFO:root:Accuracy: 74.074%, 
+Precision: 65.000%, 
+Recall: 100.000%, 
+F1-measure: 78.788%
+
+
+attach_reject
+INFO:root:Testing Normal Time: 0m 0s
+INFO:root:False positive (FP): 7
+INFO:root:True negative (TN): 7
+INFO:root:Testing Abnormal Time: 0m 0s
+INFO:root:True positive (TP): 8
+INFO:root:False negative (FN): 0
+INFO:root:Accuracy: 68.182%, 
+Precision: 53.333%, 
+Recall: 100.000%, 
+F1-measure: 69.565%
+
+total
+INFO:root:Testing Normal Time: 0m 0s
+INFO:root:False positive (FP): 7
+INFO:root:True negative (TN): 7
+INFO:root:Testing Abnormal Time: 0m 1s
+INFO:root:True positive (TP): 22
+INFO:root:False negative (FN): 0
+INFO:root:Accuracy: 80.556%, 
+Precision: 75.862%, 
+Recall: 100.000%, 
+F1-measure: 86.275%

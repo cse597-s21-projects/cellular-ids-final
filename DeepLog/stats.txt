@@ -1,0 +1,21 @@
+pnatu@linux-system:~/Work/thesis/DeepLog$ python3 LogKeyModel_predict.py 
+model_path: model/Adam_batch_size=2048_epoch=300.pt
+Number of sessions(lte_normal): 464
+Number of sessions(lte_abnormal): 60
+elapsed_time: 15.130s
+false positive (FP): 82, false negative (FN): 0, Precision: 42.254%, Recall: 100.000%, F1-measure: 59.406%
+Finished Predicting
+pnatu@linux-system:~/Work/thesis/DeepLog$ python3 LogKeyModel_predict.py 
+model_path: model/Adam_batch_size=2048_epoch=300.pt
+Number of sessions(lte_normal): 464
+Number of sessions(lte_abnormal): 60
+elapsed_time: 3.150s
+false positive (FP): 452, false negative (FN): 0, Precision: 11.719%, Recall: 100.000%, F1-measure: 20.979%
+Finished Predicting
+pnatu@linux-system:~/Work/thesis/DeepLog$ python3 LogKeyModel_predict.py 
+model_path: model/Adam_batch_size=2048_epoch=300.pt
+Number of sessions(lte_normal): 464
+Number of sessions(lte_abnormal): 60
+elapsed_time: 27.290s
+false positive (FP): 40, false negative (FN): 0, Precision: 60.000%, Recall: 100.000%, F1-measure: 75.000%
+Finished Predicting
